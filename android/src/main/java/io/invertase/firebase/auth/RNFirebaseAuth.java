@@ -919,6 +919,8 @@ class RNFirebaseAuth extends ReactContextBaseJavaModule {
         return GithubAuthProvider.getCredential(authToken);
       case "password":
         return EmailAuthProvider.getCredential(authToken, authSecret);
+      case "phone":
+        return PhoneAuthProvider.getCredential(authToken, authSecret);
       default:
         return null;
     }
